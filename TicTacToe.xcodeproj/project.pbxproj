@@ -43,7 +43,7 @@
 		C091CE0A2A668A1800BBFBEC = {
 			isa = PBXGroup;
 			children = (
-				C091CE152A668A1800BBFBEC /* TicTakToe */,
+				C091CE152A668A1800BBFBEC /* TicTacToe */,
 				C091CE142A668A1800BBFBEC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,7 +56,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C091CE152A668A1800BBFBEC /* TicTakToe */ = {
+		C091CE152A668A1800BBFBEC /* TicTacToe */ = {
 			isa = PBXGroup;
 			children = (
 				C091CE242A6690A300BBFBEC /* model */,
@@ -66,7 +66,7 @@
 				C091CE1A2A668A1A00BBFBEC /* Assets.xcassets */,
 				C091CE1C2A668A1A00BBFBEC /* Preview Content */,
 			);
-			path = TicTakToe;
+			path = TicTacToe;
 			sourceTree = "<group>";
 		};
 		C091CE1C2A668A1A00BBFBEC /* Preview Content */ = {

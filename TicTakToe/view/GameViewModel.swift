@@ -15,6 +15,8 @@ final class GameViewModel:ObservableObject{
     @Published var moves:[Move?] = Array(repeating: nil, count: 9)
     @Published  var isGameActive=false;
     @Published var alertItem: AlertItem?
+   
+    
     
     func processPlayerMove(for position:Int){
         if isTaken(in: moves, forIndex: position){return}

@@ -10,6 +10,12 @@ enum Player{
     case human, computer
 }
 
+enum PlayingStyle {
+    case easy
+    case hard
+}
+
+
 struct Move{
     let player: Player
     let BoardIdx: Int

@@ -10,7 +10,7 @@ import SwiftUI
 struct GameView: View {
 
     @StateObject private var viewModel=GameViewModel()
-    
+   
     var body: some View {
         GeometryReader{geomerty in
             VStack{

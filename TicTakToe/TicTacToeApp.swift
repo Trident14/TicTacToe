@@ -11,7 +11,7 @@ import SwiftUI
 struct TicTakToeApp: App {
     var body: some Scene {
         WindowGroup {
-            GameView()
+            Main()
         }
     }
 }

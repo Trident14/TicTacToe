@@ -18,10 +18,7 @@ struct GameView: View {
                 LazyVGrid(columns:viewModel.column,  spacing: 4){
                     ForEach(0..<9) { i in
                         ZStack{
-                            Circle()
-                                .foregroundColor(Color("primary")).opacity(0.5)
-                                .frame(width: geomerty.size.width/3 - 10 ,
-                                       height: geomerty.size.width/3 - 10)
+                            GameCircleView(proxy: geomerty)
                             
                             //if moves[i] is Nill then ""  else we display correct symobol
                             Image(systemName:viewModel.moves[i]?.indicator ?? "")
@@ -53,5 +50,15 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         GameView()
             
+    }
+}
+
+struct GameCircleView: View {
+    var proxy:GeometryProxy
+    var body: some View {
+        Circle()
+            .foregroundColor(Color("primary")).opacity(0.5)
+            .frame(width: proxy.size.width/3 - 10 ,
+                   height: proxy.size.width/3 - 10)
     }
 }

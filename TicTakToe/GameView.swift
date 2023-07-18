@@ -21,10 +21,7 @@ struct GameView: View {
                             GameCircleView(proxy: geomerty)
                             
                             //if moves[i] is Nill then ""  else we display correct symobol
-                            Image(systemName:viewModel.moves[i]?.indicator ?? "")
-                                .resizable()
-                                .frame(width: 40,height: 40)
-                                .foregroundColor(Color("secondary"))
+                            PlayerIndicator(systemImageName: viewModel.moves[i]?.indicator ?? "")
                         }
                         .onTapGesture {
                             viewModel.processPlayerMove(for: i)
@@ -60,5 +57,15 @@ struct GameCircleView: View {
             .foregroundColor(Color("primary")).opacity(0.5)
             .frame(width: proxy.size.width/3 - 10 ,
                    height: proxy.size.width/3 - 10)
+    }
+}
+
+struct PlayerIndicator: View {
+    var systemImageName:String
+    var body: some View {
+        Image(systemName:systemImageName)
+            .resizable()
+            .frame(width: 40,height: 40)
+            .foregroundColor(Color("secondary"))
     }
 }
